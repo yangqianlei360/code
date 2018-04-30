@@ -15,5 +15,13 @@ Route::group(['prefix' => 'admin'], function () {
         #系统设置
         Route::get('system','Admin\SystemController@index')->name('admin.system');
         Route::post('system','Admin\SystemController@save')->name('admin.system.save');
+        #友情链接
+        Route::get('link','Admin\LinkController@index')->name('admin.link');
+        Route::get('create','Admin\LinkController@create')->name('admin.createlink');
+        Route::post('link','Admin\LinkController@save')->name('admin.savelink');
+        Route::get('link/{link}','Admin\LinkController@show')->name('admin.showlink');
+        Route::put('link/{link}','Admin\LinkController@update')->name('admin.updatelink');
+        Route::delete('link/{link}','Admin\LinkController@delete')->name('admin.deletelink');
+        Route::delete('link','Admin\LinkController@delselect')->name('admin.delselectlink');
     });
 });

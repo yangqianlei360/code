@@ -34,7 +34,7 @@
                 <a href="javascript:;"><i class="iconfont">&#xe604;</i>推荐位管理</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;"><i class="iconfont">&#xe60c;</i>友情链接</a>
+                <a href="javascript:;" data-url="{{route('admin.link')}}" data-id='1' data-text="友情链接"><i class="iconfont">&#xe60c;</i>友情链接</a>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;"><i class="iconfont">&#xe60a;</i>RBAC</a>
