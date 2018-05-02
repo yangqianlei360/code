@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Overtrue\LaravelPinyin\ServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
         /*
          * Application Service Providers...
@@ -177,6 +178,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
 
     ],
 
@@ -228,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
+        'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
 
     ],
 

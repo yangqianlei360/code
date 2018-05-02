@@ -23,5 +23,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::put('link/{link}','Admin\LinkController@update')->name('admin.updatelink');
         Route::delete('link/{link}','Admin\LinkController@delete')->name('admin.deletelink');
         Route::delete('link','Admin\LinkController@delselect')->name('admin.delselectlink');
+
+        #模型设置
+        Route::get('models','Admin\CmodelController@index')->name('admin.cmodel');
+        Route::get('models/create','Admin\CmodelController@create')->name('admin.cmodel.create');
+        Route::post('models/save','Admin\CmodelController@save')->name('admin.cmodel.save');
     });
 });

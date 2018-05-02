@@ -43,7 +43,7 @@
                 <a href="javascript:;" data-url="email.html" data-id='4' data-text="邮件系统"><i class="iconfont">&#xe603;</i>邮件系统</a>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;"><i class="iconfont">&#xe60d;</i>生成静态</a>
+                <a href="javascript:;" data-url="{{route('admin.cmodel')}}" data-id='3' data-text="模型设置"><i class="iconfont">&#xe60d;</i>模型设置</a>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;"><i class="iconfont">&#xe600;</i>备份管理</a>

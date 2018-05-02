@@ -18,6 +18,7 @@ class ComposerStaticInit5c32572ff1a227b1fdd11f23d58933fc
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '0c3c22e27afa83be19b4c938f4c6e9ea' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Helpers/functions.php',
+        'cda2d2f579338909929d3104d0afc501' => __DIR__ . '/..' . '/overtrue/laravel-pinyin/src/helpers.php',
         'fdb3b5f01b3ed818a713c5450349237f' => __DIR__ . '/../..' . '/app/Helpers/functions.php',
     );
 
@@ -71,6 +72,11 @@ class ComposerStaticInit5c32572ff1a227b1fdd11f23d58933fc
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
+        ),
+        'O' => 
+        array (
+            'Overtrue\\Pinyin\\' => 16,
+            'Overtrue\\LaravelPinyin\\' => 23,
         ),
         'M' => 
         array (
@@ -235,6 +241,14 @@ class ComposerStaticInit5c32572ff1a227b1fdd11f23d58933fc
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Overtrue\\Pinyin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/overtrue/pinyin/src',
+        ),
+        'Overtrue\\LaravelPinyin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/overtrue/laravel-pinyin/src',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -357,12 +371,15 @@ class ComposerStaticInit5c32572ff1a227b1fdd11f23d58933fc
 
     public static $classMap = array (
         'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
+        'App\\Cmodel' => __DIR__ . '/../..' . '/app/Cmodel.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/HomeController.php',
         'App\\Http\\Controllers\\Admin\\InfoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/InfoController.php',
         'App\\Http\\Controllers\\Admin\\JumpController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/JumpController.php',
+        'App\\Http\\Controllers\\Admin\\LinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LinkController.php',
         'App\\Http\\Controllers\\Admin\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LoginController.php',
+        'App\\Http\\Controllers\\Admin\\ModelController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ModelController.php',
         'App\\Http\\Controllers\\Admin\\SystemController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SystemController.php',
         'App\\Http\\Controllers\\Admin\\WelcomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/WelcomeController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -377,12 +394,15 @@ class ComposerStaticInit5c32572ff1a227b1fdd11f23d58933fc
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Link' => __DIR__ . '/../..' . '/app/Link.php',
+        'App\\Model' => __DIR__ . '/../..' . '/app/Model.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Repositories\\InfoRespostory' => __DIR__ . '/../..' . '/app/Repositories/InfoRespostory.php',
+        'App\\Repositories\\LinkRespostory' => __DIR__ . '/../..' . '/app/Repositories/LinkRespostory.php',
+        'App\\Repositories\\ModelRespostory' => __DIR__ . '/../..' . '/app/Repositories/ModelRespostory.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
@@ -2291,6 +2311,13 @@ class ComposerStaticInit5c32572ff1a227b1fdd11f23d58933fc
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'Overtrue\\LaravelPinyin\\Facades\\Pinyin' => __DIR__ . '/..' . '/overtrue/laravel-pinyin/src/Facades/Pinyin.php',
+        'Overtrue\\LaravelPinyin\\ServiceProvider' => __DIR__ . '/..' . '/overtrue/laravel-pinyin/src/ServiceProvider.php',
+        'Overtrue\\Pinyin\\DictLoaderInterface' => __DIR__ . '/..' . '/overtrue/pinyin/src/DictLoaderInterface.php',
+        'Overtrue\\Pinyin\\FileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/FileDictLoader.php',
+        'Overtrue\\Pinyin\\GeneratorFileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/GeneratorFileDictLoader.php',
+        'Overtrue\\Pinyin\\MemoryFileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/MemoryFileDictLoader.php',
+        'Overtrue\\Pinyin\\Pinyin' => __DIR__ . '/..' . '/overtrue/pinyin/src/Pinyin.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
