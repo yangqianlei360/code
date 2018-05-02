@@ -16,6 +16,7 @@ class LinkRespostory
         $link = newObject($id, 'App\Link');
         $link->linkname = $request->linkname;
         $link->url = $request->url;
+        $link->sort = $request->sort;
         $link->remark = $request->remark;
         $link->save();
     }

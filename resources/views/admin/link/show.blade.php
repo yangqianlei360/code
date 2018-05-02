@@ -25,6 +25,14 @@
                                    autocomplete="off" class="layui-input" value="{{isset($model)?$model->url:''}}">
                         </div>
                     </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" required lay-verify="sort" placeholder="请输入序号"
+                                   autocomplete="off" class="layui-input" value="{{isset($model)?$model->sort:'0'}}">
+                        </div>
+                    </div>
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">备注：</label>
                         <div class="layui-input-block">
@@ -53,6 +61,10 @@
         layui.use(['form', 'layedit', 'laydate'], function () {
             var form = layui.form(),
                 layer = layui.layer;
+            //自定义验证规则
+            form.verify({
+                sort: [/^[1-9]\d*|0$/, '序号必须是一个正整数'],
+            });
 
             //监听提交
             form.on('submit(link)', function (data) {
